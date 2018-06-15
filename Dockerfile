@@ -45,7 +45,8 @@ RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 
 # install ODBC Driver
-RUN ACCEPT_EULA=Y apt-get install -y msodbcsql
+ENV ACCEPT_EULA=Y
+RUN apt-get install -y msodbcsql
 RUN apt-get install -y mssql-tools
 RUN apt-get install -y unixodbc-dev
 RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
