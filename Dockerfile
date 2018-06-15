@@ -12,7 +12,7 @@ RUN apt-get install -y curl git
 RUN apt-get install -y apache2
 
 # install php
-RUN apt-get -y install php7.0 mcrypt php7.0-mcrypt php-mbstring php-pear php7.0-dev php7.0-xml
+RUN apt-get -y install php7.0 mcrypt php7.0-mcrypt php-mbstring php-pear php7.0-dev php7.0-xml php7.0-curl
 RUN apt-get install -y libapache2-mod-php7.0
 
 # install pre requisites
